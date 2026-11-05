@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Live chat test page | Focus Group demo</title>
+<style>
+  :root {
+    --navy: #1F1A39; --blue: #39476D; --grey: #ECEBEC; --mist: #E8F5F9;
+    --teal: #2BB8C9; --green: #169879; --amber: #C9A400; --red: #C93C3C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, "Liberation Sans", Helvetica, sans-serif; color: var(--navy); background: #fff; line-height: 1.5; }
+  .demo-bar { background: var(--navy); color: #fff; font-size: 14px; padding: 10px 24px; text-align: center; }
+  .demo-bar b { color: var(--mist); }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 48px; border-bottom: 1px solid var(--grey); }
+  header img { height: 58px; width: auto; }
+  header .tag { font-size: 14px; color: var(--blue); }
+  .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy) 40%, var(--blue) 100%); color: #fff; padding: 64px 48px; }
+  .hero h1 { font-size: 38px; line-height: 1.2; margin: 0 0 14px; max-width: 760px; }
+  .hero p { font-size: 18px; max-width: 720px; margin: 0 0 24px; color: var(--mist); }
+  .cta { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--navy); font-weight: 700; padding: 12px 20px; border-radius: 6px; font-size: 16px; }
+  .cta span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); }
+  main { max-width: 1120px; margin: 0 auto; padding: 48px 32px 96px; }
+  h2 { font-size: 24px; margin: 0 0 8px; }
+  .lead { color: var(--blue); margin: 0 0 20px; }
+  section { margin-bottom: 56px; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .step { background: var(--grey); padding: 20px; border-radius: 8px; }
+  .step b { display: block; font-size: 15px; margin-bottom: 4px; }
+  .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th { background: var(--navy); color: #fff; text-align: left; padding: 10px 12px; font-weight: 700; }
+  td { padding: 10px 12px; border-bottom: 1px solid #DAD9DE; vertical-align: top; }
+  tbody tr:nth-child(odd) td { background: #F7F7F8; }
+  .cols td { white-space: nowrap; } .cols td:first-child { white-space: normal; }
+  td code { background: var(--mist); color: var(--blue); padding: 1px 6px; border-radius: 4px; font-size: 13px; white-space: nowrap; }
+  .path { font-weight: 700; }
+  .path i { font-style: normal; color: var(--blue); font-weight: 400; }
+  .tick { display: inline-block; width: 18px; height: 18px; border: 2px solid var(--blue); border-radius: 4px; vertical-align: middle; cursor: pointer; }
+  .tick.on { background: var(--green); border-color: var(--green); }
+  .tick.on::after { content: "✓"; color: #fff; font-size: 13px; display: block; text-align: center; line-height: 14px; }
+  .tag-fix { display: inline-block; font-size: 12px; font-weight: 700; color: #0F5560; background: #DCF2F5; padding: 1px 8px; border-radius: 10px; margin-left: 6px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .note { background: var(--mist); border-left: 5px solid var(--blue); padding: 16px 20px; border-radius: 4px; font-size: 15px; }
+  .warn { background: #FDF6D2; border-left-color: var(--amber); }
+  footer { background: var(--grey); padding: 24px 48px; font-size: 13px; color: var(--blue); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  @media (max-width: 760px) { header, .hero, footer { padding-left: 20px; padding-right: 20px; } .cols { grid-template-columns: 1fr; } .hero h1 { font-size: 30px; } table { font-size: 14px; } }
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><b>Demo site</b> · Built by Focus Group to test a live chat journey on a Talkdesk demo instance. This is not a real company website.</div>
+
+<header>
+  <img src="logo-navy-on-light-transparent.png" alt="Focus Group">
+  <div class="tag">Talkdesk live chat test page</div>
+</header>
+
+<div class="hero">
+  <h1>Car warranty live chat: test page</h1>
+  <p>Use the chat button in the bottom-right corner to try each journey below. The bot asks a few questions, then hands you to the right team, just as a real customer would experience it.</p>
+  <div class="cta"><span></span> Chat button: bottom right of this page</div>
+</div>
+
+<main>
+
+  <section>
+    <h2>How to test</h2>
+    <p class="lead">Each test takes a minute or two. Please work through as many as you can.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>Pick a scenario</b>Choose one from the list below and note its number.</div>
+      <div class="step"><div class="n">2</div><b>Open the chat</b>Fill in the name and email form (test details are fine), then follow the path shown.</div>
+      <div class="step"><div class="n">3</div><b>Check where you land</b>Confirm the right team picked the chat up, or you saw the expected message.</div>
+      <div class="step"><div class="n">4</div><b>Tick it off</b>Tick the box, and note anything odd: wording, delays, wrong team.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Test scenarios</h2>
+    <p class="lead">Ticks are saved in your own browser only, so each tester keeps their own checklist.</p>
+    <table>
+      <thead><tr><th style="width:44px"></th><th style="width:36px">#</th><th>Path to follow in the chat</th><th>Expected result</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tick" data-id="1"></span></td><td>1</td><td class="path">Customer <i>›</i> any reg <i>›</i> Car Warranty Sales <i>›</i> Yes, came with my car</td><td>Upgrades &amp; Renewals team <code>upgrades_renewals_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="2"></span></td><td>2</td><td class="path">Customer <i>›</i> any reg <i>›</i> Car Warranty Sales <i>›</i> No, I don't have one</td><td>Private Sales team <code>private_sales_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="3"></span></td><td>3</td><td class="path">Customer <i>›</i> any reg <i>›</i> Admin</td><td>Admin team <code>admin_livechat</code> (until 16:50 weekdays)</td></tr>
+        <tr><td><span class="tick" data-id="4"></span></td><td>4</td><td class="path">Customer <i>›</i> any reg <i>›</i> Trade Department <i>›</i> Yes</td><td>Complaints notice, then Repairs team <code>repairs_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="5"></span></td><td>5</td><td class="path">Customer <i>›</i> any reg <i>›</i> Trade Department <i>›</i> No <i>›</i> No</td><td>Goodbye message, chat ends</td></tr>
+        <tr><td><span class="tick" data-id="6"></span></td><td>6</td><td class="path">Customer <i>›</i> any reg <i>›</i> Repairs <i>›</i> Log a repair request <i>›</i> Yes <i>›</i> plan ref or reg</td><td>Repair advice, then Repairs team <code>repairs_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="7"></span></td><td>7</td><td class="path">Customer <i>›</i> any reg <i>›</i> Repairs <i>›</i> Other <i>›</i> plan ref or reg <span class="tag-fix">fixed</span></td><td>Straight to Repairs team <code>repairs_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="8"></span></td><td>8</td><td class="path">Customer <i>›</i> any reg <i>›</i> Repairs <i>›</i> Update on my repair <i>›</i> No</td><td>Update advice, then 'We will now end the chat'</td></tr>
+        <tr><td><span class="tick" data-id="9"></span></td><td>9</td><td class="path">Dealer <i>›</i> Trading Dealer <i>›</i> Yes <i>›</i> business name <i>›</i> W3D</td><td>Dealer team <code>dealer_livechat</code> (until 17:30 weekdays)</td></tr>
+        <tr><td><span class="tick" data-id="10"></span></td><td>10</td><td class="path">Dealer <i>›</i> Trading Dealer <i>›</i> No <i>›</i> business name</td><td>Dealer team <code>dealer_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="11"></span></td><td>11</td><td class="path">Dealer <i>›</i> Repairing Garage <i>›</i> plan ref or reg</td><td>Repairs team <code>repairs_livechat</code></td></tr>
+        <tr><td><span class="tick" data-id="12"></span></td><td>12</td><td class="path">Type a word instead of tapping a button at any menu</td><td>'Please select one of the options below…' and the menu again</td></tr>
+        <tr><td><span class="tick" data-id="13"></span></td><td>13</td><td class="path">Any path, but don't accept the chat as an agent</td><td>After 2 minutes (5 for Private Sales): 'All of our advisors are busy…', then the team's inbox</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="cols">
+    <div>
+      <h2>Opening hours being tested</h2>
+      <p class="lead">Outside these times you should see that team's closed message instead of an agent.</p>
+      <table>
+        <thead><tr><th>Team</th><th>Monday to Friday</th><th>Saturday</th></tr></thead>
+        <tbody>
+          <tr><td>Chat overall</td><td>08:30 – 19:00</td><td>09:00 – 15:00</td></tr>
+          <tr><td>Private Sales, Upgrades &amp; Renewals</td><td>09:00 – 19:00</td><td>09:00 – 15:00</td></tr>
+          <tr><td>Repairs</td><td>08:30 – 19:00</td><td>Closed</td></tr>
+          <tr><td>Dealer</td><td>09:00 – 17:30</td><td>Closed</td></tr>
+          <tr><td>Admin</td><td>08:30 – 16:50</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>Good to know</h2>
+      <div class="note" style="margin-bottom:16px">This page runs on a <b>Talkdesk demo instance</b>. Agents in each test team need to be logged in and available in Conversations to pick chats up.</div>
+      <div class="note warn">Use test details only. Please don't enter real customer information, vehicle registrations or plan references.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Focus Group · Talkdesk live chat demo</span>
+  <span>Let's connect. Let's grow.</span>
+</footer>
+
+<script>
+  document.querySelectorAll('.tick').forEach(function (t) {
+    var k = 'ww-demo-tick-' + t.dataset.id;
+    try { if (localStorage.getItem(k) === '1') t.classList.add('on'); } catch (e) {}
+    t.addEventListener('click', function () {
+      t.classList.toggle('on');
+      try { localStorage.setItem(k, t.classList.contains('on') ? '1' : '0'); } catch (e) {}
+    });
+  });
+</script>
+
+<!-- Start of Talkdesk Code -->
+<script>
+  var webchat;
+  (function(window, document, node, props, configs) {
+    if (window.TalkdeskChatSDK) {
+      console.error("TalkdeskChatSDK already included");
+      return;
+    }
+    var divContainer = document.createElement("div");
+    divContainer.id = node;
+    document.body.appendChild(divContainer);
+    var src = "https://talkdeskchatsdk.talkdeskapp.com/v2/talkdeskchatsdk.js";
+    var script = document.createElement("script");
+    var firstScriptTag = document.getElementsByTagName("script")[0];
+    script.type = "text/javascript";
+    script.charset = "UTF-8";
+    script.id = "tdwebchatscript";
+    script.src = src;
+    script.async = true;
+    firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+    script.onload = function() {
+      webchat = TalkdeskChatSDK(node, props);
+      webchat.init(configs);
+    };
+  })(
+    window,
+    document,
+    "tdWebchat",
+    { touchpointId: "f16c15f651c241e39252885cc7197ab5", accountId: "", region: "td-eu-1" },
+    { enableValidation: false, enableEmoji: true, enableUserInput: true, enableAttachments: true }
+  );
+</script>
+<!-- End of Talkdesk Code -->
+
+</body>
+</html>
